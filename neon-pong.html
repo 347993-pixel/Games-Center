@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Pong | Pixel Party</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark"></span>Pixel Party</a>
+    <nav>
+      <a href="subway-run.html">Subway Run</a>
+      <a href="color-catch.html">Color Catch</a>
+      <a class="active" href="neon-pong.html">Neon Pong</a>
+    </nav>
+  </header>
+  <main class="play-layout">
+    <section class="game-panel">
+      <div class="game-topline">
+        <div><p class="kicker">Reflex</p><h1>Neon Pong</h1></div>
+        <div class="score-pill"><span id="pongScore">0</span>/7</div>
+      </div>
+      <div class="canvas-stage">
+        <canvas id="pongCanvas" width="720" height="720" aria-label="Neon Pong game canvas"></canvas>
+        <div id="pongStartOverlay" class="start-overlay">
+          <div class="start-panel">
+            <h2>Ready to rally?</h2>
+            <p>Move the paddle, keep the ball alive, and score 7 rallies to win.</p>
+            <button id="pongStart" class="primary-action" type="button">Start Game</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="side-panel">
+      <h2>How to Play</h2>
+      <p>Move the paddle with your mouse or arrow keys. Score 7 rallies to win.</p>
+      <p>Missing the ball ends the round.</p>
+      <button id="pongRestart" class="primary-action" type="button">Restart</button>
+      <a class="text-link" href="index.html">Back to arcade</a>
+    </aside>
+  </main>
+  <script src="neon-pong.js"></script>
+</body>
+</html>

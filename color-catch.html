@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Catch | Pixel Party</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="color-catch-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark"></span>Pixel Party</a>
+    <nav>
+      <a href="subway-run.html">Subway Run</a>
+      <a class="active" href="color-catch.html">Color Catch</a>
+      <a href="neon-pong.html">Neon Pong</a>
+    </nav>
+  </header>
+  <main class="play-layout">
+    <section class="game-panel">
+      <div class="game-topline">
+        <div><p class="kicker">Matcher</p><h1>Color Catch</h1></div>
+        <div class="score-pill"><span id="catchScore">0</span>/10</div>
+      </div>
+      <div class="canvas-stage">
+        <canvas id="catchCanvas" width="720" height="720" aria-label="Color Catch game canvas"></canvas>
+        <div id="catchStartOverlay" class="start-overlay">
+          <div class="start-panel">
+            <h2>Ready to catch?</h2>
+            <p>Move the bucket, match the color, and catch 10 drops before missing 5.</p>
+            <button id="catchStart" class="primary-action" type="button">Start Game</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="side-panel">
+      <h2>How to Play</h2>
+      <p>Move with Left/Right or your mouse. Catch drops that match your bucket color.</p>
+      <p>Catch 10 matching drops before missing 5.</p>
+      <button id="catchRestart" class="primary-action" type="button">Restart</button>
+      <a class="text-link" href="index.html">Back to arcade</a>
+    </aside>
+  </main>
+  <script src="color-catch.js"></script>
+</body>
+</html>

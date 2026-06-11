@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subway Coin Run</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-layout">
+    <main class="game-shell">
+      <section class="topbar" aria-label="Game status">
+        <div>
+          <p class="eyebrow">Subway Coin Run</p>
+          <h1>Dodge, jump, collect 20 coins.</h1>
+        </div>
+        <div class="scoreboard">
+          <span>Coins</span>
+          <strong id="coinCount">0 / 20</strong>
+        </div>
+      </section>
+
+      <section class="canvas-wrap">
+        <canvas id="gameCanvas" width="900" height="560" aria-label="Playable subway runner game"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-panel">
+            <h2 id="overlayTitle">Ready to run?</h2>
+            <p id="overlayText">Arrow keys move lanes. Move the mouse left or right with a deliberate swipe to steer. Click or tap to jump over low buildings. Collect 20 coins to win.</p>
+            <button id="restartButton" type="button">Start Game</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="instructions" aria-label="Controls">
+        <div><strong>Move</strong><span>Arrow keys or deliberate mouse swipes</span></div>
+        <div><strong>Jump</strong><span>Click, tap, or Space</span></div>
+        <div><strong>Goal</strong><span>Collect 20 coins before crashing</span></div>
+      </section>
+    </main>
+
+    <aside class="arcade-panel" aria-label="Subway Run actions">
+      <h2>How to Play</h2>
+      <p>Use the same controls shown beside the game. Collect 20 coins before crashing.</p>
+      <button type="button" onclick="document.getElementById('restartButton').click()">Restart</button>
+      <a class="back-link" href="index.html">Back to arcade</a>
+    </aside>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
