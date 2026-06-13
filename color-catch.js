@@ -54,7 +54,7 @@ function spawnDrop() {
     y: -30,
     r: DROP_RADIUS,
     color: colors[Math.floor(Math.random() * colors.length)],
-    speed: 1.35 + Math.random() * 1.15,
+    speed: 2.15 + Math.random() * 1.65,
   });
 }
 
@@ -72,7 +72,7 @@ function update() {
     if (drops.length < MAX_DROPS) {
       spawnDrop();
     }
-    spawnTimer = 118;
+    spawnTimer = 82;
   }
   drops.forEach((drop) => drop.y += drop.speed);
   drops = drops.filter((drop) => {
@@ -151,9 +151,6 @@ window.addEventListener("keyup", (event) => keys.delete(event.key));
 canvas.addEventListener("mousemove", (event) => {
   const rect = canvas.getBoundingClientRect();
   bucket.x = (event.clientX - rect.left) / rect.width * canvas.width;
-});
-canvas.addEventListener("click", () => {
-  bucket.color = colors[(colors.indexOf(bucket.color) + 1) % colors.length];
 });
 restartBtn.addEventListener("click", reset);
 startBtn.addEventListener("click", startGame);

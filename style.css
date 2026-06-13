@@ -38,6 +38,10 @@ body.color-catch-page {
   background: #eafaf5 url("assets/color-catch-page-bg.png") center top / 520px 520px repeat;
 }
 
+body.tic-tac-toe-page {
+  background: #f3c8dd url("assets/tic-tac-toe-outer-bg.png") center center / cover fixed no-repeat;
+}
+
 a {
   color: inherit;
 }
@@ -228,11 +232,8 @@ button:active,
   background: #fff url("assets/color-catch-cover.png") center center / cover no-repeat;
 }
 
-.pong-art {
-  background:
-    linear-gradient(90deg, #fff 0 4%, transparent 5% 95%, #fff 96%),
-    radial-gradient(circle at 55% 42%, var(--yellow) 0 8%, transparent 9%),
-    #211a52;
+.tic-art {
+  background: #2da7e9 url("assets/tic-tac-toe-cover.png") center center / cover no-repeat;
 }
 
 .game-name {
@@ -327,6 +328,26 @@ canvas {
   margin: 0 0 18px;
   font-weight: 800;
   line-height: 1.45;
+}
+
+.mark-picker {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 auto 18px;
+  max-width: 220px;
+}
+
+.mark-choice {
+  min-height: 54px;
+  padding: 8px;
+  background: #fff;
+  color: var(--line);
+  font-size: 1.35rem;
+}
+
+.mark-choice.active {
+  background: var(--yellow);
 }
 
 .side-panel {
