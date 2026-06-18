@@ -233,7 +233,7 @@ button:active,
 }
 
 .tic-art {
-  background: #2da7e9 url("assets/tic-tac-toe-cover.png") center center / cover no-repeat;
+  background: #9b6036 url("assets/gomoku-cover.png") center center / cover no-repeat;
 }
 
 .game-name {
@@ -293,6 +293,17 @@ canvas {
   touch-action: none;
 }
 
+body.tic-tac-toe-page .play-layout {
+  width: min(1340px, calc(100% - 28px));
+}
+
+body.tic-tac-toe-page canvas {
+  width: min(100%, 78vh);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
 .canvas-stage {
   position: relative;
 }
@@ -348,6 +359,10 @@ canvas {
 
 .mark-choice.active {
   background: var(--yellow);
+}
+
+.music-toggle {
+  background: var(--blue);
 }
 
 .side-panel {

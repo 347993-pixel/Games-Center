@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tic Tac Toe | Pixel Party</title>
+  <title>Gomoku | Pixel Party</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="tic-tac-toe-page">
@@ -12,24 +12,24 @@
     <nav>
       <a href="subway-run.html">Subway Run</a>
       <a href="color-catch.html">Color Catch</a>
-      <a class="active" href="neon-pong.html">Tic Tac Toe</a>
+      <a class="active" href="neon-pong.html">Gomoku</a>
     </nav>
   </header>
   <main class="play-layout">
     <section class="game-panel">
       <div class="game-topline">
-        <div><p class="kicker">Strategy</p><h1>Tic Tac Toe</h1></div>
-        <div class="score-pill"><span id="ticStatus">X turn</span></div>
+        <div><p class="kicker">Strategy</p><h1>Gomoku</h1></div>
+        <div class="score-pill"><span id="ticStatus">Black turn</span></div>
       </div>
       <div class="canvas-stage">
-        <canvas id="ticCanvas" width="720" height="720" aria-label="Tic Tac Toe game canvas"></canvas>
+        <canvas id="ticCanvas" width="720" height="720" aria-label="Gomoku game canvas"></canvas>
         <div id="ticStartOverlay" class="start-overlay">
           <div class="start-panel">
-            <h2>Ready to line up?</h2>
-            <p>Play as X, take turns with O, and make three in a row to win.</p>
-            <div class="mark-picker" aria-label="Choose your mark">
-              <button id="chooseX" class="mark-choice active" type="button">X</button>
-              <button id="chooseO" class="mark-choice" type="button">O</button>
+            <h2>Ready to connect?</h2>
+            <p>Choose your stone, take turns, and make five in a row to win.</p>
+            <div class="mark-picker" aria-label="Choose your stone">
+              <button id="chooseX" class="mark-choice active" type="button">Black</button>
+              <button id="chooseO" class="mark-choice" type="button">White</button>
             </div>
             <button id="ticStart" class="primary-action" type="button">Start Game</button>
           </div>
@@ -38,9 +38,10 @@
     </section>
     <aside class="side-panel">
       <h2>How to Play</h2>
-      <p>Choose X or O, then click an empty square when it is your turn.</p>
-      <p>Line up three marks across, down, or diagonal before the computer does.</p>
+      <p>Choose Black or White, then click an empty intersection when it is your turn.</p>
+      <p>Connect five stones across, down, or diagonal before the computer does.</p>
       <button id="ticRestart" class="primary-action" type="button">Restart</button>
+      <button id="musicToggle" class="primary-action music-toggle" type="button" aria-pressed="false">Music Off</button>
       <a class="text-link" href="index.html">Back to arcade</a>
     </aside>
   </main>
